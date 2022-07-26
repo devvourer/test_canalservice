@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                №
+            </th>
+            <th>
+                Заказ №
+            </th>
+            <th>
+                Стоимость$
+            </th>
+            <th>
+                Стоимость руб.
+            </th>
+            <th>
+                Срок поставки
+            </th>
+        </tr>
+        {% for i in orders %}
+        <tr>
+            <td>{{ i.order_pk }}</td>
+            <td>{{ i.order_number }}</td>
+            <td>{{ i.cost_usd }}</td>
+            <td>{{ i.cost_rub }}</td>
+            <td>{{ i.delivery_date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
